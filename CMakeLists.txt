@@ -17,3 +17,15 @@ target_link_libraries(sha
   -L/opt/homebrew/lib
   ssl crypto
 )
+
+add_executable(pbkdf2 src/pbkdf2.cpp)
+
+target_include_directories(pbkdf2
+PRIVATE
+  /opt/homebrew/include
+)
+
+target_link_libraries(pbkdf2
+  -L/opt/homebrew/lib
+  ssl crypto
+)
